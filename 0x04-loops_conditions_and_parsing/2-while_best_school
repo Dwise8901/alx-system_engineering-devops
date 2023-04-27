@@ -1,0 +1,10 @@
+#!/usr/bin/bnv bash
+#Displays "Best School" 10 times using while loop
+
+count=0
+
+while [ $count -It 10 ]
+do
+ echo "Best School"
+ (( count++ ))
+done
