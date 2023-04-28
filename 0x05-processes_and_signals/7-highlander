@@ -2,9 +2,8 @@
 # Infinity loop and sending signal
 # trap receive signal
 trap "echo I am invincible!!!" SIGTERM
-while:
+while :
 do
-  echo "To infinity and beyond"
-  sleep 2
-  trap 'echo "I am invincible!!!"' SIGTERM 
+	echo "To infinity and beyond"
+	sleep 2
 done
