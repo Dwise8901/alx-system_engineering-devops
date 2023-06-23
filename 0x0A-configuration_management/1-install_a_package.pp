@@ -1,5 +1,5 @@
-# install puppet-lint -v 2.5.0
-
-exec { 'puppet-lint':
-  command => '/usr/bin/apt-get -y install puppet-lint -v 2.5.0',
+# Using Puppet, install puppet-lint
+package { 'puppet-lint':
+  ensure          =>  'installed',
+  install_options =>  ['-v', '2.1.1'],
 }
