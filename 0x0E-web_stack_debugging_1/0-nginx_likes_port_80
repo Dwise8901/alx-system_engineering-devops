@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
-# Open the 80 port
-sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
-service nginx restart
+# This is a bash script that fix my web server that is not listen on port 80
+# This command copy and paste from sites-available to sites-enabled using a symbolic link
+# symolic link -s
+sudo ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+sudo service nginx restart
