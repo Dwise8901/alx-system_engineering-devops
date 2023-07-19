@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# This script fixes a container so that Nginx runs as the nginx user & listens on port 8080
+pkill -f apache2
+sudo -u nginx service nginx start > /dev/null 2>&1
+chmod 644 /etc/nginx/nginx.conf
+sed -i 's/80/8080/' /etc/nginx/sites-available/default
+sudo -u nginx service nginx restart > /dev/null 2>&1
