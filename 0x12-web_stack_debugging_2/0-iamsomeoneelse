@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
-#run a command as an especific user
-
-sudo -u "$1" whoami
+# Switching users
+sudo -u "$1" bash -c whoami
